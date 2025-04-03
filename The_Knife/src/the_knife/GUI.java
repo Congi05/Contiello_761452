@@ -169,7 +169,7 @@ public class GUI extends javax.swing.JFrame {
         if(Ristoratore.isSelected())
             System.out.println("Ristoratore");
         if(Ospite.isSelected())
-            System.out.println("Ciao");
+            System.out.println("Ospite");
         
         
         
