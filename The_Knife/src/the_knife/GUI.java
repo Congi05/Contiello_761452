@@ -34,7 +34,7 @@ public class GUI extends javax.swing.JFrame {
 
     try {
         // Carica l'immagine da un file
-        ImageIcon icon = new ImageIcon("C:\\Users\\conti\\Desktop\\Contiello_761452\\The_knife_logo.png"); // Modifica con il tuo percorso dell'immagine
+        ImageIcon icon = new ImageIcon(getClass().getResource("images/The_knife_logo.png"));
         Image image = icon.getImage(); // Ottieni l'immagine
         Image resizedImage = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH); // Ridimensiona l'immagine
 
@@ -79,7 +79,7 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(51, 153, 0));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 255, 153), new java.awt.Color(204, 255, 153), new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51)));
@@ -92,6 +92,7 @@ public class GUI extends javax.swing.JFrame {
         Cliente.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         Cliente.setForeground(new java.awt.Color(255, 255, 255));
         Cliente.setText("Cliente");
+        Cliente.setFocusPainted(false);
         Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClienteActionPerformed(evt);
@@ -179,7 +180,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(101, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101))
+                .addGap(92, 92, 92))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
