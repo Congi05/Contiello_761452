@@ -30,8 +30,8 @@ public class GUI extends javax.swing.JFrame {
      * Creates new form GUI
      */
     public GUI() {
-    initComponents(); // Questo viene generato automaticamente
-
+        initComponents(); // Questo viene generato automaticamente
+    
     try {
         // Carica l'immagine da un file
         ImageIcon icon = new ImageIcon(getClass().getResource("images/The_knife_logo.png"));
@@ -40,7 +40,6 @@ public class GUI extends javax.swing.JFrame {
 
         // Imposta l'icona nella JLabel
         jLabel4.setIcon(new ImageIcon(resizedImage));
-
         // Impostiamo il layout e allineamento del testo
         jLabel4.setIconTextGap(40); // Distanza tra il testo e l'icona (puoi modificarlo)
         
@@ -70,34 +69,27 @@ public class GUI extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Cliente = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
         Ristoratore = new javax.swing.JRadioButton();
+        Cliente = new javax.swing.JRadioButton();
         Ospite = new javax.swing.JRadioButton();
         Avanti = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(51, 153, 0));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 255, 153), new java.awt.Color(204, 255, 153), new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51)));
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 30)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 27)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Scegli la ");
+        jLabel1.setText("SCEGLI LA");
 
-        buttonGroup1.add(Cliente);
-        Cliente.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        Cliente.setForeground(new java.awt.Color(255, 255, 255));
-        Cliente.setText("Cliente");
-        Cliente.setFocusPainted(false);
-        Cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClienteActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 27)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("MODALITA' DI ACCESSO");
 
         buttonGroup1.add(Ristoratore);
         Ristoratore.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -109,47 +101,48 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(Cliente);
+        Cliente.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        Cliente.setForeground(new java.awt.Color(255, 255, 255));
+        Cliente.setText("Cliente");
+        Cliente.setActionCommand("Cliente");
+        Cliente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClienteActionPerformed(evt);
+            }
+        });
+
         buttonGroup1.add(Ospite);
         Ospite.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         Ospite.setForeground(new java.awt.Color(255, 255, 255));
         Ospite.setText("Ospite");
 
-        Avanti.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Avanti.setText("Avanti");
+        Avanti.setBackground(new java.awt.Color(125, 191, 94));
+        Avanti.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        Avanti.setForeground(new java.awt.Color(255, 255, 255));
+        Avanti.setText("AVANTI");
+        Avanti.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         Avanti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AvantiActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 30)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("modalità di accesso");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(Avanti, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ospite, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Ristoratore)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Ospite, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(3, 3, 3))))
-                .addGap(97, 97, 97))
+                    .addComponent(Avanti, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,21 +166,23 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        Cliente.getAccessibleContext().setAccessibleParent(jPanel4);
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(101, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(43, 43, 43)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -214,10 +209,8 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
